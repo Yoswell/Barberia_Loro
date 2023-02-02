@@ -7,6 +7,7 @@ body {
     color: #797979;
     background: #17171a;
     font-family: monospace;
+    width: 360px;
 }
 
 h1,
@@ -335,7 +336,8 @@ a:focus {
     }
 
     .hero .hero-image img {
-       margin-top: 100px;
+       width: 250px !important;
+       margin-top: 150px;
     }
 }
 
@@ -345,7 +347,7 @@ a:focus {
     }
 
     .hero .hero-image img {
-        width: 400px;
+        width: 300px;
         margin-top: 50px;
     }
 }
