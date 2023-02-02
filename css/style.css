@@ -92,132 +92,33 @@ a:focus {
     width: 5px;
     height: 5px;
     transition: 1.0s;
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background-color: #D5B981;
     background-clip: padding-box;
     border: 2px solid transparent;
     border-radius: 5px;
     transition: 1.0s;
-  }
-  
-  ::-webkit-scrollbar-thumb:vertical:hover,
-  ::-webkit-scrollbar-thumb:horizontal:hover {
+}
+
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:horizontal:hover {
     background-color: #D5B981;
     transition: 0.3s;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     background-color: transparent;
-  }
-  
-  ::-webkit-scrollbar-thumb:vertical:active,
-  ::-webkit-scrollbar-thumb:horizontal:active {
+}
+
+::-webkit-scrollbar-thumb:vertical:active,
+::-webkit-scrollbar-thumb:horizontal:active {
     background: #D5B981;
-  }
-  
-  ::-webkit-scrollbar-corner {
+}
+
+::-webkit-scrollbar-corner {
     background: none;
-  }
-
-/**********************************/
-/*********** Nav Bar CSS **********/
-/**********************************/
-.nav {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    background-color: #111113;
-    align-items: center;
-    z-index: 999;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    font-size: 1rem;
-    color: #D5B981;
-    padding-left: 10px;
-    font-family: 'Abril Fatface', cursive;
-}
-
-.logo img {
-    width: 80px;
-}
-
-.hamburger {
-    position: relative;
-    padding-right: 20px;
-    cursor: pointer;
-}
-
-.hamburger i {
-    display: block;
-    color: #D5B981;
-    font-size: 2rem;
-}
-
-.nav__link {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: calc(100vh);
-    top: 5rem;
-    background-color: #111113;
-    z-index: 999;
-    transition: 1s;
-}
-
-.nav__link a {
-    display: block;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 1.3rem;
-}
-
-.nav__link a:hover {
-    color: #D5B981;
-}
-
-.hide {
-    transform: translateX(200%);
-}
-
-@media (min-width: 900px) {
-    .nav__link {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        width: 650px;
-        height: 0;
-        top: 0;
-        background-color: #111113;
-        z-index: 999;
-        transition: 1s;
-    }
-
-    .nav__link a {
-        display: block;
-        text-align: center;
-        padding: 10px;
-    }
-
-    .hide {
-        transform: translateX(0%);
-    }
-
-    .hamburger {
-        display: none;
-    }
 }
 
 /*******************************/
@@ -225,11 +126,10 @@ a:focus {
 /*******************************/
 .hero {
     position: relative;
+    top: 0;
     width: 100%;
-    height: 980px;
     margin-bottom: 45px;
     background: #111113;
-    overflow: hidden;
 }
 
 .hero .container-fluid .row {
@@ -240,22 +140,18 @@ a:focus {
 
 .hero .container-fluid .row .mendican {
     width: 100%;
-    height: 50%;
-}
-
-.hero .hero-text {
-    position: relative;
-    width: 100%;
-    height: 50%;
-    padding: 30px;
+    height: 100%;
+    display: flex;
 }
 
 .hero .hero-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     text-align: center;
-    margin-top: -480px;
     width: 100%;
-    height: 50%;
+    height: 400px;
 }
 
 .hero .hero-image img {
@@ -264,10 +160,11 @@ a:focus {
 }
 
 .hero .hero-text {
-    padding: 200px;
+    padding-top: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
     position: relative;
-    top: -150px;
-    height: calc(100vh - 60px);
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -319,45 +216,12 @@ a:focus {
     .hero .hero-text {
         padding: 20px;
     }
-    
-    .hero .hero-image {
-        margin-top: -420px;
-    }
 
     .hero .hero-image img {
         width: 400px;
+        margin-top: -100px;
     }
 }
-
-@media (min-height: 500px) {
-    .hero .container-fluid .row {
-        margin-top: 100px;
-    }
-
-    .hero .hero-image img {
-       width: 250px !important;
-       margin-top: 150px;
-    }
-}
-
-@media (min-height: 800px) {
-    .hero .container-fluid .row {
-        margin-top: 0px;
-    }
-
-    .hero .hero-image img {
-        width: 300px;
-        margin-top: 50px;
-    }
-}
-
-@media (min-height: 900px) {
-    .hero .hero-image img {
-        width: 400px !important;
-        margin-top: 50px;
-    }
-}
-
 
 @media (max-width: 767.98px) {
     .hero .hero-text h1 {
@@ -378,14 +242,6 @@ a:focus {
 }
 
 @media (max-width: 600px) {
-
-    .hero {
-        height: 900px;
-    }
-    .hero .hero-image {
-        margin-top: -400px;
-    }
-
     .hero .hero-image img {
         width: 300px;
     }
@@ -406,6 +262,16 @@ a:focus {
         font-size: 14px;
         font-weight: 400;
         letter-spacing: 0;
+    }
+}
+
+@media (min-height: 600px) {
+    .hero .hero-text {
+        padding: 20px;
+    }
+
+    .hero .hero-image img {
+        width: 300px;
     }
 }
 
