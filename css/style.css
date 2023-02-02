@@ -7,7 +7,6 @@ body {
     color: #797979;
     background: #17171a;
     font-family: monospace;
-    width: 360px;
 }
 
 h1,
@@ -351,6 +350,14 @@ a:focus {
         margin-top: 50px;
     }
 }
+
+@media (min-height: 900px) {
+    .hero .hero-image img {
+        width: 400px !important;
+        margin-top: 50px;
+    }
+}
+
 
 @media (max-width: 767.98px) {
     .hero .hero-text h1 {
