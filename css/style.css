@@ -350,7 +350,7 @@ a:focus {
     flex-direction: column;
     width: 100%;
     padding: 45px 0 80px 0;
-    background-color: #111113 500ms;
+    background-color: #111113 !important;
 }
 
 .service a {
